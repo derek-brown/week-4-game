@@ -1,0 +1,8 @@
+*{
+    border: 1px solid red;
+}
+.img-responsive{
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+}
