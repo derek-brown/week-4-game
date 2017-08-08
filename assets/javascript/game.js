@@ -7,23 +7,25 @@ $(document).ready(function(){
     console.log(crystal1, crystal2, crystal3, crystal4);
 
 
-    random = Math.floor(Math.random()*101)+19;
+    random = Math.floor(Math.random()*102)+19;
     $(".rndNum").html(random);
 
      //sets random number as page is loaded
     $(".crystalImgOne").on("click", function() {
-        crystal1 = Math.floor(Math.random()*11)+1;
-        $("")
-
+        crystal1 = Math.floor(Math.random()*12)+1;
+        $(".resultOne").html(crystal1);
     });
-    $(".crystalTwo").on("click", function() {
-        crystal2 = $(".crystalTwo").html(Math.floor(Math.random()*11)+1);
+    $(".crystalImgTwo").on("click", function() {
+        crystal2 = Math.floor(Math.random()*12)+1;
+        $(".resultTwo").html(crystal2);
     });
-    $(".crystalThree").on("click", function() {
-        crystal3 = $(".crystalThree").html(Math.floor(Math.random()*11)+1);
+    $(".crystalImgThree").on("click", function() {
+        crystal3 = Math.floor(Math.random()*12)+1;
+        $(".resultThree").html(crystal3);
     });
-    $(".crystalFour").on("click", function() {
-        crystal4 = $(".crystalFour").html(Math.floor(Math.random()*11)+1);
+    $(".crystalImgFour").on("click", function() {
+        crystal4 = Math.floor(Math.random()*12)+1;
+        $(".resultFour").html(crystal4);
     });
 
 }); //closes document.ready
