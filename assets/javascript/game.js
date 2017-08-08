@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var crystal1 = Math.floor(Math.random()*12)+1;
+    var crystal1 = Math.floor(Math.random()*12)+1; //immediately loads in random values
     var crystal2 = Math.floor(Math.random()*12)+1;
     var crystal3 = Math.floor(Math.random()*12)+1;
     var crystal4 = Math.floor(Math.random()*12)+1;
@@ -8,7 +8,9 @@ $(document).ready(function(){
     var win = 0;
     var loss = 0;
 
-    function check(){
+    $(".rndNum").html(random); //loads the randomly generated number to the html
+
+    function check(){ //function to check if the game has been won or lost then resets accordingly
         if (score === random){
             win++;
             $(".wins").html("Wins: "+win);
@@ -37,17 +39,15 @@ $(document).ready(function(){
         }
     };
 
-    $(".rndNum").html(random); //loads the randomly generated number to the html
-
     console.log(crystal1, crystal2, crystal3, crystal4); //logs out the numbers for cheaters
 
-    $(".crystalImgOne").on("click", function() {
-        ($(".score").attr("crystalOne", crystal1));
-        var crystalValue = ($(".score").attr("crystalOne"));
-        crystalValue = parseInt(crystalValue);
-        score += crystalValue;
-        $(".score").html(score);
-        check();
+    $(".crystalImgOne").on("click", function() { //on click of the crystal img
+        ($(".score").attr("crystalOne", crystal1)); //creates a data attr to store the random number
+        var crystalValue = ($(".score").attr("crystalOne"));//saves that value to use locally
+        crystalValue = parseInt(crystalValue);//adds the string values together
+        score += crystalValue;//stores the values into the global score variable
+        $(".score").html(score);//updates the total score
+        check();//checks to see if the game has been won
     });
 
         $(".crystalImgTwo").on("click", function() {
