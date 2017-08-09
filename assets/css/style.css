@@ -2,8 +2,8 @@
     border: 1px solid red;
 }*/
 .img-responsive{
-    height: 250px;
-    width: 250px;
+    height: 15em;
+    width: 15em;
     margin: 0 auto;
 }
 body{
