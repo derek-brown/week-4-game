@@ -2,8 +2,8 @@
     border: 1px solid red;
 }*/
 .img-responsive{
-    height: 15em;
-    width: 15em;
+    height: 250px;
+    width: 250px;
     margin: 0 auto;
 }
 body{
@@ -12,7 +12,7 @@ body{
 .panel{
     background-color:  #9932CC;
 }
-p, h1, h2, h3, h4{
+p, h1, h2, h3{
     color: white;
 }
 h3{
